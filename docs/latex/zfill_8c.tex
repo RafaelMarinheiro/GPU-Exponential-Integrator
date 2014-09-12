@@ -1,0 +1,124 @@
+\hypertarget{zfill_8c}{\section{src/magma\-\_\-test/zfill.c \-File \-Reference}
+\label{zfill_8c}\index{src/magma\-\_\-test/zfill.\-c@{src/magma\-\_\-test/zfill.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include \char`\"{}zfill.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{zfill_8c_a6f8e2a1d143ffabecea27510a5ed88f9}{\-A}(i\-\_\-, j\-\_\-)~\hyperlink{zfill_8c_a6f8e2a1d143ffabecea27510a5ed88f9}{\-A}\mbox{[} (i\-\_\-) + (j\-\_\-)$\ast$lda \mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{zfill_8c_abc861ef6086dbfc8a610c89bc37724e6}{zfill\-\_\-matrix} (magma\-\_\-int\-\_\-t m, magma\-\_\-int\-\_\-t n, magma\-Double\-Complex $\ast$\hyperlink{zfill_8c_a6f8e2a1d143ffabecea27510a5ed88f9}{\-A}, magma\-\_\-int\-\_\-t lda)
+\item 
+void \hyperlink{zfill_8c_a0fe86cdefd0dc86080769c588573cd88}{zfill\-\_\-rhs} (magma\-\_\-int\-\_\-t m, magma\-\_\-int\-\_\-t nrhs, magma\-Double\-Complex $\ast$\-X, magma\-\_\-int\-\_\-t ldx)
+\item 
+void \hyperlink{zfill_8c_aecfe1e1e073e880bd9136f56173cd2a1}{zfill\-\_\-matrix\-\_\-gpu} (magma\-\_\-int\-\_\-t m, magma\-\_\-int\-\_\-t n, magma\-Double\-Complex $\ast$d\-A, magma\-\_\-int\-\_\-t ldda)
+\item 
+void \hyperlink{zfill_8c_adfbbcccb0edce64855461cf6cf02a045}{zfill\-\_\-rhs\-\_\-gpu} (magma\-\_\-int\-\_\-t m, magma\-\_\-int\-\_\-t nrhs, magma\-Double\-Complex $\ast$d\-X, magma\-\_\-int\-\_\-t lddx)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{zfill_8c_a6f8e2a1d143ffabecea27510a5ed88f9}{\index{zfill.\-c@{zfill.\-c}!\-A@{\-A}}
+\index{\-A@{\-A}!zfill.c@{zfill.\-c}}
+\subsubsection[{\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A}(
+\begin{DoxyParamCaption}
+\item[{}]{i\-\_\-, }
+\item[{}]{j\-\_\-}
+\end{DoxyParamCaption}
+)~{\bf \-A}\mbox{[} (i\-\_\-) + (j\-\_\-)$\ast$lda \mbox{]}}}\label{zfill_8c_a6f8e2a1d143ffabecea27510a5ed88f9}
+
+
+\-Referenced by cpu\-\_\-interface(), and zfill\-\_\-matrix\-\_\-gpu().
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{zfill_8c_abc861ef6086dbfc8a610c89bc37724e6}{\index{zfill.\-c@{zfill.\-c}!zfill\-\_\-matrix@{zfill\-\_\-matrix}}
+\index{zfill\-\_\-matrix@{zfill\-\_\-matrix}!zfill.c@{zfill.\-c}}
+\subsubsection[{zfill\-\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf zfill\-\_\-matrix} (
+\begin{DoxyParamCaption}
+\item[{magma\-\_\-int\-\_\-t}]{m, }
+\item[{magma\-\_\-int\-\_\-t}]{n, }
+\item[{magma\-Double\-Complex $\ast$}]{\-A, }
+\item[{magma\-\_\-int\-\_\-t}]{lda}
+\end{DoxyParamCaption}
+)}}\label{zfill_8c_abc861ef6086dbfc8a610c89bc37724e6}
+
+
+\-Definition at line 28 of file zfill.\-c.
+
+
+
+\-Referenced by cpu\-\_\-interface(), zfill\-\_\-matrix\-\_\-gpu(), and zfill\-\_\-rhs().
+
+\hypertarget{zfill_8c_aecfe1e1e073e880bd9136f56173cd2a1}{\index{zfill.\-c@{zfill.\-c}!zfill\-\_\-matrix\-\_\-gpu@{zfill\-\_\-matrix\-\_\-gpu}}
+\index{zfill\-\_\-matrix\-\_\-gpu@{zfill\-\_\-matrix\-\_\-gpu}!zfill.c@{zfill.\-c}}
+\subsubsection[{zfill\-\_\-matrix\-\_\-gpu}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf zfill\-\_\-matrix\-\_\-gpu} (
+\begin{DoxyParamCaption}
+\item[{magma\-\_\-int\-\_\-t}]{m, }
+\item[{magma\-\_\-int\-\_\-t}]{n, }
+\item[{magma\-Double\-Complex $\ast$}]{d\-A, }
+\item[{magma\-\_\-int\-\_\-t}]{ldda}
+\end{DoxyParamCaption}
+)}}\label{zfill_8c_aecfe1e1e073e880bd9136f56173cd2a1}
+
+
+\-Definition at line 56 of file zfill.\-c.
+
+
+
+\-References \-A, and zfill\-\_\-matrix().
+
+
+
+\-Referenced by gpu\-\_\-interface(), and zfill\-\_\-rhs\-\_\-gpu().
+
+\hypertarget{zfill_8c_a0fe86cdefd0dc86080769c588573cd88}{\index{zfill.\-c@{zfill.\-c}!zfill\-\_\-rhs@{zfill\-\_\-rhs}}
+\index{zfill\-\_\-rhs@{zfill\-\_\-rhs}!zfill.c@{zfill.\-c}}
+\subsubsection[{zfill\-\_\-rhs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf zfill\-\_\-rhs} (
+\begin{DoxyParamCaption}
+\item[{magma\-\_\-int\-\_\-t}]{m, }
+\item[{magma\-\_\-int\-\_\-t}]{nrhs, }
+\item[{magma\-Double\-Complex $\ast$}]{\-X, }
+\item[{magma\-\_\-int\-\_\-t}]{ldx}
+\end{DoxyParamCaption}
+)}}\label{zfill_8c_a0fe86cdefd0dc86080769c588573cd88}
+
+
+\-Definition at line 45 of file zfill.\-c.
+
+
+
+\-References zfill\-\_\-matrix().
+
+
+
+\-Referenced by cpu\-\_\-interface().
+
+\hypertarget{zfill_8c_adfbbcccb0edce64855461cf6cf02a045}{\index{zfill.\-c@{zfill.\-c}!zfill\-\_\-rhs\-\_\-gpu@{zfill\-\_\-rhs\-\_\-gpu}}
+\index{zfill\-\_\-rhs\-\_\-gpu@{zfill\-\_\-rhs\-\_\-gpu}!zfill.c@{zfill.\-c}}
+\subsubsection[{zfill\-\_\-rhs\-\_\-gpu}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf zfill\-\_\-rhs\-\_\-gpu} (
+\begin{DoxyParamCaption}
+\item[{magma\-\_\-int\-\_\-t}]{m, }
+\item[{magma\-\_\-int\-\_\-t}]{nrhs, }
+\item[{magma\-Double\-Complex $\ast$}]{d\-X, }
+\item[{magma\-\_\-int\-\_\-t}]{lddx}
+\end{DoxyParamCaption}
+)}}\label{zfill_8c_adfbbcccb0edce64855461cf6cf02a045}
+
+
+\-Definition at line 74 of file zfill.\-c.
+
+
+
+\-References zfill\-\_\-matrix\-\_\-gpu().
+
+
+
+\-Referenced by gpu\-\_\-interface().
+

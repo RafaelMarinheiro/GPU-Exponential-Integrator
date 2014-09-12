@@ -15,6 +15,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 option(USE_DEBUG "Turn on the debug mode" OFF)
 option(USE_64BIT_ARCH "Compile the 64bit executable" ON)
 option(USE_CUDA "Use CUDA" ON)
+option(BUILD_LIB "Turn on to build tests" ON)
 option(BUILD_TESTS "Turn on to build tests" OFF)
 option(USE_MKL_BLAS             "Get BLAS/LAPACK from MKL" ON)
 

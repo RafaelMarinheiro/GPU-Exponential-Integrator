@@ -1,3 +1,9 @@
+/* 
+* @Author: Rafael Farias Marinheiro
+* @Date:   2014-09-08 16:16:08
+* @Last Modified by:   Rafael Farias Marinheiro
+* @Last Modified time: 2014-09-09 18:51:28
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
