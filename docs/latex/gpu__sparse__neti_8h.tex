@@ -1,0 +1,207 @@
+\hypertarget{gpu__sparse__neti_8h}{\section{src/gpu\-\_\-sparse\-\_\-neti.h \-File \-Reference}
+\label{gpu__sparse__neti_8h}\index{src/gpu\-\_\-sparse\-\_\-neti.\-h@{src/gpu\-\_\-sparse\-\_\-neti.\-h}}
+}
+{\ttfamily \#include \char`\"{}neti\-\_\-types.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gpu__sparse__neti_8h_a3da5c7c74a1b12589d7ded960729a7f9}{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size} (int ndof, int krylov\-\_\-length, int $\ast$gpu\-\_\-int\-\_\-work\-\_\-space\-\_\-size, int $\ast$gpu\-\_\-float\-\_\-work\-\_\-space\-\_\-size, int $\ast$cpu\-\_\-float\-\_\-work\-\_\-space\-\_\-size)
+\begin{DoxyCompactList}\small\item\em \-A function that return the required buffer size for the gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s algorithm. \end{DoxyCompactList}\item 
+int \hyperlink{gpu__sparse__neti_8h_afbe2e4f3e0459194dc767188c5032f67}{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s} (int ndof, const \hyperlink{neti__types_8h_a53eda632a7fd0db08c4d1e62bfdb2382}{sparse\-\_\-s\-\_\-matrix\-\_\-t} $\ast$inv\-Mass\-Matrix, const \hyperlink{neti__types_8h_a53eda632a7fd0db08c4d1e62bfdb2382}{sparse\-\_\-s\-\_\-matrix\-\_\-t} $\ast$damping\-Matrix, const \hyperlink{neti__types_8h_a53eda632a7fd0db08c4d1e62bfdb2382}{sparse\-\_\-s\-\_\-matrix\-\_\-t} $\ast$stiffness\-Matrix, const float $\ast$force\-Vector, float $\ast$old\-Position, float $\ast$current\-Position, magma\-\_\-int\-\_\-t $\ast$gpu\-\_\-int\-\_\-work\-\_\-space, float $\ast$gpu\-\_\-float\-\_\-work\-\_\-space, float $\ast$cpu\-\_\-float\-\_\-work\-\_\-space, float delta\-Time, int krylov\-\_\-length)
+\begin{DoxyCompactList}\small\item\em \-A \-G\-P\-U implementation of the \-N\-E\-T\-I algorithm \mbox{[}\-Michels et \-Al 2014\mbox{]}. \end{DoxyCompactList}\item 
+int \hyperlink{gpu__sparse__neti_8h_a43fcc9a53f1d2e594cc86adcce5f5da0}{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d} (int ndof, const \hyperlink{neti__types_8h_a197312d3ecb4933ace80638e784511ce}{sparse\-\_\-d\-\_\-matrix\-\_\-t} $\ast$inv\-Mass\-Matrix, const \hyperlink{neti__types_8h_a197312d3ecb4933ace80638e784511ce}{sparse\-\_\-d\-\_\-matrix\-\_\-t} $\ast$damping\-Matrix, const \hyperlink{neti__types_8h_a197312d3ecb4933ace80638e784511ce}{sparse\-\_\-d\-\_\-matrix\-\_\-t} $\ast$stiffness\-Matrix, const double $\ast$force\-Vector, double $\ast$old\-Position, double $\ast$current\-Position, magma\-\_\-int\-\_\-t $\ast$gpu\-\_\-int\-\_\-work\-\_\-space, double $\ast$gpu\-\_\-double\-\_\-work\-\_\-space, double $\ast$cpu\-\_\-double\-\_\-work\-\_\-space, double delta\-Time, int krylov\-\_\-length)
+\begin{DoxyCompactList}\small\item\em \-A \-G\-P\-U implementation of the \-N\-E\-T\-I algorithm \mbox{[}\-Michels et \-Al 2014\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{gpu__sparse__neti_8h_a43fcc9a53f1d2e594cc86adcce5f5da0}{\index{gpu\-\_\-sparse\-\_\-neti.\-h@{gpu\-\_\-sparse\-\_\-neti.\-h}!gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d@{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d}}
+\index{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d@{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d}!gpu_sparse_neti.h@{gpu\-\_\-sparse\-\_\-neti.\-h}}
+\subsubsection[{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d} (
+\begin{DoxyParamCaption}
+\item[{int}]{ndof, }
+\item[{const {\bf sparse\-\_\-d\-\_\-matrix\-\_\-t} $\ast$}]{inv\-Mass\-Matrix, }
+\item[{const {\bf sparse\-\_\-d\-\_\-matrix\-\_\-t} $\ast$}]{damping\-Matrix, }
+\item[{const {\bf sparse\-\_\-d\-\_\-matrix\-\_\-t} $\ast$}]{stiffness\-Matrix, }
+\item[{const double $\ast$}]{force\-Vector, }
+\item[{double $\ast$}]{old\-Position, }
+\item[{double $\ast$}]{current\-Position, }
+\item[{magma\-\_\-int\-\_\-t $\ast$}]{gpu\-\_\-int\-\_\-work\-\_\-space, }
+\item[{double $\ast$}]{gpu\-\_\-double\-\_\-work\-\_\-space, }
+\item[{double $\ast$}]{cpu\-\_\-double\-\_\-work\-\_\-space, }
+\item[{double}]{delta\-Time, }
+\item[{int}]{krylov\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{gpu__sparse__neti_8h_a43fcc9a53f1d2e594cc86adcce5f5da0}
+
+
+\-A \-G\-P\-U implementation of the \-N\-E\-T\-I algorithm \mbox{[}\-Michels et \-Al 2014\mbox{]}. 
+
+\mbox{[}long description\mbox{]}
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em ndof} & \-Number of degrees of freedom \\
+\hline
+\mbox{\tt in}  & {\em mass\-Matrix} & \-C\-R\-S \-Sparse \-Representation of the \-Mass \-Matrix (a ndof.\-ndof matrix) \\
+\hline
+\mbox{\tt in}  & {\em damping\-Matrix} & \-C\-R\-S \-Sparse \-Representation of the \-Damping \-Matrix (a ndof.\-ndof matrix) \\
+\hline
+\mbox{\tt in}  & {\em stiffness\-Matrix} & \-C\-R\-S \-Sparse \-Representation of the \-Stiffness \-Matrix (a ndof.\-ndof matrix) \\
+\hline
+\mbox{\tt in}  & {\em force\-Vector} & \-Force \-Vector (a ndof vector) \\
+\hline
+\mbox{\tt in,out}  & {\em old\-Position} & \-The old position (a ndof vector) \\
+\hline
+\mbox{\tt in,out}  & {\em current\-Position} & \-The current position (a ndof vector) \\
+\hline
+\mbox{\tt in}  & {\em gpu\-\_\-int\-\_\-work\-\_\-space} & \-Integer array allocated in gpu \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\{\hyperlink{gpu__sparse__neti_8c_a3da5c7c74a1b12589d7ded960729a7f9}{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size}\} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em gpu\-\_\-double\-\_\-work\-\_\-space} & \-Double array allocated in gpu \\
+\hline
+\mbox{\tt in}  & {\em cpu\-\_\-double\-\_\-work\-\_\-space} & \-Double array allocated in cpu \\
+\hline
+\mbox{\tt in}  & {\em work\-\_\-space} & \-Pre-\/allocated work space (@) \\
+\hline
+\mbox{\tt in}  & {\em delta\-Time} & \-The timestep \\
+\hline
+\mbox{\tt in}  & {\em krylov\-\_\-length} & \-The dimension of the krylov space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+old\-Position will contain the old current\-Position, while current\-Position will contain the new position 
+\end{DoxyReturn}
+\hypertarget{gpu__sparse__neti_8h_afbe2e4f3e0459194dc767188c5032f67}{\index{gpu\-\_\-sparse\-\_\-neti.\-h@{gpu\-\_\-sparse\-\_\-neti.\-h}!gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s@{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s}}
+\index{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s@{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s}!gpu_sparse_neti.h@{gpu\-\_\-sparse\-\_\-neti.\-h}}
+\subsubsection[{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s} (
+\begin{DoxyParamCaption}
+\item[{int}]{ndof, }
+\item[{const {\bf sparse\-\_\-s\-\_\-matrix\-\_\-t} $\ast$}]{inv\-Mass\-Matrix, }
+\item[{const {\bf sparse\-\_\-s\-\_\-matrix\-\_\-t} $\ast$}]{damping\-Matrix, }
+\item[{const {\bf sparse\-\_\-s\-\_\-matrix\-\_\-t} $\ast$}]{stiffness\-Matrix, }
+\item[{const float $\ast$}]{force\-Vector, }
+\item[{float $\ast$}]{old\-Position, }
+\item[{float $\ast$}]{current\-Position, }
+\item[{magma\-\_\-int\-\_\-t $\ast$}]{gpu\-\_\-int\-\_\-work\-\_\-space, }
+\item[{float $\ast$}]{gpu\-\_\-float\-\_\-work\-\_\-space, }
+\item[{float $\ast$}]{cpu\-\_\-float\-\_\-work\-\_\-space, }
+\item[{float}]{delta\-Time, }
+\item[{int}]{krylov\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{gpu__sparse__neti_8h_afbe2e4f3e0459194dc767188c5032f67}
+
+
+\-A \-G\-P\-U implementation of the \-N\-E\-T\-I algorithm \mbox{[}\-Michels et \-Al 2014\mbox{]}. 
+
+\mbox{[}long description\mbox{]}
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em ndof} & \-Number of degrees of freedom \\
+\hline
+\mbox{\tt in}  & {\em mass\-Matrix} & \-C\-R\-S \-Sparse \-Representation of the \-Mass \-Matrix (a ndof.\-ndof matrix) \\
+\hline
+\mbox{\tt in}  & {\em damping\-Matrix} & \-C\-R\-S \-Sparse \-Representation of the \-Damping \-Matrix (a ndof.\-ndof matrix) \\
+\hline
+\mbox{\tt in}  & {\em stiffness\-Matrix} & \-C\-R\-S \-Sparse \-Representation of the \-Stiffness \-Matrix (a ndof.\-ndof matrix) \\
+\hline
+\mbox{\tt in}  & {\em force\-Vector} & \-Force \-Vector (a ndof vector) \\
+\hline
+\mbox{\tt in,out}  & {\em old\-Position} & \-The old position (a ndof vector) \\
+\hline
+\mbox{\tt in,out}  & {\em current\-Position} & \-The current position (a ndof vector) \\
+\hline
+\mbox{\tt in}  & {\em gpu\-\_\-int\-\_\-work\-\_\-space} & \-Integer array allocated in gpu \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\{\hyperlink{gpu__sparse__neti_8c_a3da5c7c74a1b12589d7ded960729a7f9}{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size}\} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em gpu\-\_\-float\-\_\-work\-\_\-space} & \-Float array allocated in gpu \\
+\hline
+\mbox{\tt in}  & {\em cpu\-\_\-float\-\_\-work\-\_\-space} & \-Float array allocated in cpu \\
+\hline
+\mbox{\tt in}  & {\em work\-\_\-space} & \-Pre-\/allocated work space (@) \\
+\hline
+\mbox{\tt in}  & {\em delta\-Time} & \-The timestep \\
+\hline
+\mbox{\tt in}  & {\em krylov\-\_\-length} & \-The dimension of the krylov space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+old\-Position will contain the old current\-Position, while current\-Position will contain the new position 
+\end{DoxyReturn}
+
+
+\-Definition at line 26 of file gpu\-\_\-sparse\-\_\-neti.\-c.
+
+\hypertarget{gpu__sparse__neti_8h_a3da5c7c74a1b12589d7ded960729a7f9}{\index{gpu\-\_\-sparse\-\_\-neti.\-h@{gpu\-\_\-sparse\-\_\-neti.\-h}!gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size@{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size}}
+\index{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size@{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size}!gpu_sparse_neti.h@{gpu\-\_\-sparse\-\_\-neti.\-h}}
+\subsubsection[{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s\-\_\-get\-\_\-size} (
+\begin{DoxyParamCaption}
+\item[{int}]{ndof, }
+\item[{int}]{krylov\-\_\-length, }
+\item[{int $\ast$}]{gpu\-\_\-int\-\_\-work\-\_\-space\-\_\-size, }
+\item[{int $\ast$}]{gpu\-\_\-float\-\_\-work\-\_\-space\-\_\-size, }
+\item[{int $\ast$}]{cpu\-\_\-float\-\_\-work\-\_\-space\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{gpu__sparse__neti_8h_a3da5c7c74a1b12589d7ded960729a7f9}
+
+
+\-A function that return the required buffer size for the gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s algorithm. 
+
+\-A function that return the required buffer size for the gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d algorithm.
+
+\begin{DoxySeeAlso}{\-See also}
+\{\hyperlink{gpu__sparse__neti_8c_afbe2e4f3e0459194dc767188c5032f67}{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-s}\}
+\end{DoxySeeAlso}
+\mbox{[}long description\mbox{]}
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em ndof} & \-Number of degrees of freedom \\
+\hline
+\mbox{\tt in}  & {\em krylov\-\_\-length} & \-The dimension of the krylov space \\
+\hline
+\mbox{\tt out}  & {\em gpu\-\_\-int\-\_\-work\-\_\-space\-\_\-size} & \-Number of elements of a gpu int buffer \\
+\hline
+\mbox{\tt out}  & {\em gpu\-\_\-float\-\_\-work\-\_\-space\-\_\-size} & \-Number of elements of a gpu float buffer \\
+\hline
+\mbox{\tt out}  & {\em cpu\-\_\-float\-\_\-work\-\_\-space\-\_\-size} & \-Number of elements of a cpu float buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns the buffer size for each buffer type
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\{\hyperlink{gpu__sparse__neti_8h_a43fcc9a53f1d2e594cc86adcce5f5da0}{gpu\-\_\-crs\-\_\-symmetric\-\_\-sparse\-\_\-neti\-\_\-d}\}
+\end{DoxySeeAlso}
+\mbox{[}long description\mbox{]}
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em ndof} & \-Number of degrees of freedom \\
+\hline
+\mbox{\tt in}  & {\em krylov\-\_\-length} & \-The dimension of the krylov space \\
+\hline
+\mbox{\tt out}  & {\em gpu\-\_\-int\-\_\-work\-\_\-space\-\_\-size} & \-Number of elements of a gpu int buffer \\
+\hline
+\mbox{\tt out}  & {\em gpu\-\_\-double\-\_\-work\-\_\-space\-\_\-size} & \-Number of elements of a gpu double buffer \\
+\hline
+\mbox{\tt out}  & {\em cpu\-\_\-double\-\_\-work\-\_\-space\-\_\-size} & \-Number of elements of a cpu double buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns the buffer size for each buffer type 
+\end{DoxyReturn}
+
+
+\-Definition at line 10 of file gpu\-\_\-sparse\-\_\-neti.\-c.
+

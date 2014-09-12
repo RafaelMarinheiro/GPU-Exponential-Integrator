@@ -1,0 +1,76 @@
+\hypertarget{example_8c}{\section{src/magma\-\_\-test/example.c \-File \-Reference}
+\label{example_8c}\index{src/magma\-\_\-test/example.\-c@{src/magma\-\_\-test/example.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$cublas\-\_\-v2.\-h$>$}\*
+{\ttfamily \#include $<$magma.\-h$>$}\*
+{\ttfamily \#include \char`\"{}zfill.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{example_8c_ac16522e4ff1ca9533ad635b4e909f303}{cpu\-\_\-interface} (magma\-\_\-int\-\_\-t n, magma\-\_\-int\-\_\-t nrhs)
+\item 
+void \hyperlink{example_8c_af12d2baf82ef912b45f3093c39e42d43}{gpu\-\_\-interface} (magma\-\_\-int\-\_\-t n, magma\-\_\-int\-\_\-t nrhs)
+\item 
+int \hyperlink{example_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{example_8c_ac16522e4ff1ca9533ad635b4e909f303}{\index{example.\-c@{example.\-c}!cpu\-\_\-interface@{cpu\-\_\-interface}}
+\index{cpu\-\_\-interface@{cpu\-\_\-interface}!example.c@{example.\-c}}
+\subsubsection[{cpu\-\_\-interface}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cpu\-\_\-interface} (
+\begin{DoxyParamCaption}
+\item[{magma\-\_\-int\-\_\-t}]{n, }
+\item[{magma\-\_\-int\-\_\-t}]{nrhs}
+\end{DoxyParamCaption}
+)}}\label{example_8c_ac16522e4ff1ca9533ad635b4e909f303}
+
+
+\-Definition at line 17 of file example.\-c.
+
+
+
+\-References \-A, zfill\-\_\-matrix(), and zfill\-\_\-rhs().
+
+
+
+\-Referenced by main().
+
+\hypertarget{example_8c_af12d2baf82ef912b45f3093c39e42d43}{\index{example.\-c@{example.\-c}!gpu\-\_\-interface@{gpu\-\_\-interface}}
+\index{gpu\-\_\-interface@{gpu\-\_\-interface}!example.c@{example.\-c}}
+\subsubsection[{gpu\-\_\-interface}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf gpu\-\_\-interface} (
+\begin{DoxyParamCaption}
+\item[{magma\-\_\-int\-\_\-t}]{n, }
+\item[{magma\-\_\-int\-\_\-t}]{nrhs}
+\end{DoxyParamCaption}
+)}}\label{example_8c_af12d2baf82ef912b45f3093c39e42d43}
+
+
+\-Definition at line 57 of file example.\-c.
+
+
+
+\-References zfill\-\_\-matrix\-\_\-gpu(), and zfill\-\_\-rhs\-\_\-gpu().
+
+
+
+\-Referenced by main().
+
+\hypertarget{example_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{example.\-c@{example.\-c}!main@{main}}
+\index{main@{main}!example.c@{example.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{example_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 93 of file example.\-c.
+
+
+
+\-References cpu\-\_\-interface(), and gpu\-\_\-interface().
+
